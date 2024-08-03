@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -14,3 +14,20 @@ def cardapio():
 @app.route("/cadastre_se")
 def cadastre_se():
     return render_template('cadastre_se.html')
+
+@app.route('/cadastro', methods=['GET', 'POST'])
+def cadastro():
+    if request.method == 'POST':
+        # Aqui você pode processar os dados do formulário
+        nome = request.form['nome']
+        senha = request.form['senha']
+        # Adicione código para salvar os dados no banco de dados ou processá-los conforme necessário
+        return redirect(url_for('index'))
+    return render_template('cadastre_se.html')
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
