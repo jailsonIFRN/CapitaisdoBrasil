@@ -6,11 +6,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-
-@app.route("/cardapio")
-def cardapio():
-    return render_template('cardapio.html')
-
+# -----------------------------------------------------------
 @app.route("/cadastre_se")
 def cadastre_se():
     return render_template('cadastre_se.html')
@@ -25,6 +21,17 @@ def cadastro():
         return redirect(url_for('index'))
     return render_template('cadastre_se.html')
 
+
+
+# --------------------------------------------------------------------
+@app.route('/cadastre')
+def cadastre():
+    return render_template('cadastrou.html')
+
+@app.route('/base', methods=['GET', 'POST'])
+def base():
+    return redirect(url_for('cadastro'))
+    return render_template('base.html')
 
 
 if __name__ == '__main__':
