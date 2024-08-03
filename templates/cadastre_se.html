@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border: 2px solid orange;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .container input[type="text"],
+        .container input[type="password"],
+        .container input[type="submit"],
+        .container a {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            border: 2px solid orange;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+        .container input[type="submit"] {
+            background-color: orange;
+            color: white;
+            cursor: pointer;
+        }
+        .container a:hover,
+        .container input[type="submit"]:hover {
+            background-color: #ffa500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#">CADASTRE-SE AQUI</a>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha">
+            <input type="submit" value="ENTRAR">
+        </form>
+        <a href="#">Voltar para a tela inicial</a>
+    </div>
+</body>
+</html>

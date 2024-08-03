@@ -11,3 +11,6 @@ def index():
 def cardapio():
     return render_template('cardapio.html')
 
+@app.route("/cadastre_se")
+def cadastre_se():
+    return render_template('cadastre_se.html')
