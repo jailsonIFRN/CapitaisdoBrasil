@@ -2,70 +2,13 @@
 
 {% block conteudo %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Região Norte</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
-        }
-        .header {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .content {
-            display: flex;
-        }
-        .map {
-            margin-right: 20px;
-        }
-        .states {
-            font-size: 18px;
-        }
-        .states li {
-            margin-bottom: 5px;
-        }
-        .buttons {
-            display: flex;
-            margin-top: 20px;
-        }
-        .button {
-            padding: 10px 20px;
-            margin: 0 10px;
-            border: none;
-            cursor: pointer;
-        }
-        .button.register {
-            background-color: red;
-            color: white;
-        }
-        .button.back {
-            background-color: #ddd;
-        }
-        .caption {
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">REGIÃO NORTE</div>
-        <div class="content">
-            <div class="map">
-                <img src="mapa_regiao_norte.png" alt="Mapa da Região Norte" width="300">
+    <div>
+        <div>REGIÃO NORTE</div>
+        <div>
+            <div>
+                <img src="imagens/mapa_regiao_norte.png" alt="Mapa da Região Norte" width="300">
             </div>
-            <div class="states">
+            <div>
                 <p>A região Norte do Brasil é composta por 7 estados. São eles:</p>
                 <ol>
                     <li>Acre (AC)</li>
@@ -78,15 +21,14 @@
                 </ol>
             </div>
         </div>
-        <div class="caption">Cadastre aqui, as CAPITAIS da Região NORTE.</div>
-        <div class="buttons">
-            <button class="button register">CADASTRAR</button>
-            <button class="button back">VOLTAR</button>
+        <div>Cadastre aqui, as CAPITAIS da Região NORTE.</div>
+        <div>
+            <button>CADASTRAR</button>
+            <button>VOLTAR</button>
         </div>
     </div>
 </body>
 </html>
-
 
 {% endblock %}
 

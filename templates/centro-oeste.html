@@ -2,68 +2,11 @@
 
 {% block conteudo %}
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Região Centro-Oeste</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
-        }
-        .header {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .content {
-            display: flex;
-        }
-        .map {
-            margin-right: 20px;
-        }
-        .states {
-            font-size: 18px;
-        }
-        .states li {
-            margin-bottom: 5px;
-        }
-        .buttons {
-            display: flex;
-            margin-top: 20px;
-        }
-        .button {
-            padding: 10px 20px;
-            margin: 0 10px;
-            border: none;
-            cursor: pointer;
-        }
-        .button.register {
-            background-color: red;
-            color: white;
-        }
-        .button.back {
-            background-color: #ddd;
-        }
-        .caption {
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">REGIÃO CENTRO-OESTE</div>
-        <div class="content">
-            <div class="map">
-                <img src="centro-oeste.jpg" alt="Mapa da Região Centro-Oeste" width="300">
+    <div>
+        <div>REGIÃO CENTRO-OESTE</div>
+        <div>
+            <div>
+                <img src="imagens/centro-oeste.jpg" alt="Mapa da Região Centro-Oeste" width="300">
             </div>
             <div class="states">
                 <p>A região Centro-Oeste do Brasil é composta por 3 estados e 1 distrito federal. São eles:</p>
@@ -81,12 +24,6 @@
             <button class="button back">VOLTAR</button>
         </div>
     </div>
-</body>
-</html>
-
-
-
-
 
 {% endblock %}
 

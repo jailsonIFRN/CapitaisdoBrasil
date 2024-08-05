@@ -6,7 +6,31 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+#------ ROTAS DO ARQUIVO da base.html --------
+
+@app.route("/norte")
+def norte():
+    return render_template('norte.html')
+
+@app.route("/nordeste")
+def nordeste():
+    return render_template('nordeste.html')
+
+@app.route("/sul")
+def sul():
+    return render_template('sul.html')
+
+@app.route("/sudeste")
+def sudeste():
+    return render_template('sudeste.html')
+
+@app.route("/centro-oeste")
+def centro-oeste():
+    return render_template('centro-oeste.html')
+
+
 # -----------------------------------------------------------
+
 @app.route("/cadastre_se")
 def cadastre_se():
     return render_template('cadastre_se.html')
@@ -24,13 +48,13 @@ def cadastro():
 
 
 # --------------------------------------------------------------------
-@app.route('/cadastre')
-def cadastre():
-    return render_template('cadastrou.html')
+# @app.route('/cadastre')
+# def cadastre():
+#     return render_template('cadastrou.html')
 
 @app.route('/base', methods=['GET', 'POST'])
 def base():
-    return redirect(url_for('cadastro'))
+    # return redirect(url_for('cadastro'))
     return render_template('base.html')
 
 

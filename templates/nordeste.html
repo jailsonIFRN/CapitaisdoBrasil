@@ -2,70 +2,13 @@
 
 {% block conteudo %}
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Região Nordeste</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
-        }
-        .header {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .content {
-            display: flex;
-        }
-        .map {
-            margin-right: 20px;
-        }
-        .states {
-            font-size: 18px;
-        }
-        .states li {
-            margin-bottom: 5px;
-        }
-        .buttons {
-            display: flex;
-            margin-top: 20px;
-        }
-        .button {
-            padding: 10px 20px;
-            margin: 0 10px;
-            border: none;
-            cursor: pointer;
-        }
-        .button.register {
-            background-color: red;
-            color: white;
-        }
-        .button.back {
-            background-color: #ddd;
-        }
-        .caption {
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">REGIÃO NORDESTE</div>
-        <div class="content">
-            <div class="map">
-                <img src="nordeste.jpg" alt="Mapa da Região Nordeste" width="300">
+    <div>
+        <div>REGIÃO NORDESTE</div>
+        <div>
+            <div>
+                <img src="imagens/nordeste.jpg" alt="Mapa da Região Nordeste" width="300">
             </div>
-            <div class="states">
+            <div>
                 <p>A região Nordeste do Brasil é composta por 9 estados. São eles:</p>
                 <ol>
                     <li>Alagoas (AL)</li>
@@ -80,17 +23,11 @@
                 </ol>
             </div>
         </div>
-        <div class="caption">Cadastre aqui, as CAPITAIS da Região NORDESTE.</div>
-        <div class="buttons">
-            <button class="button register">CADASTRAR</button>
-            <button class="button back">VOLTAR</button>
+        <div>Cadastre aqui, as CAPITAIS da Região NORDESTE.</div>
+        <div>
+            <button>CADASTRAR</button>
+            <button>VOLTAR</button>
         </div>
     </div>
-</body>
-</html>
-
-
-
-
 
 {% endblock %}
