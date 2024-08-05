@@ -24,8 +24,8 @@ def sul():
 def sudeste():
     return render_template('sudeste.html')
 
-@app.route("/centro-oeste")
-def centro-oeste():
+@app.route("/centro_oeste")
+def centro_oeste():
     return render_template('centro-oeste.html')
 
 
@@ -48,13 +48,13 @@ def cadastro():
 
 
 # --------------------------------------------------------------------
-# @app.route('/cadastre')
-# def cadastre():
-#     return render_template('cadastrou.html')
+@app.route('/cadastre')
+def cadastre():
+    return render_template('cadastrou.html')
 
 @app.route('/base', methods=['GET', 'POST'])
 def base():
-    # return redirect(url_for('cadastro'))
+    return redirect(url_for('cadastro'))
     return render_template('base.html')
 
 
