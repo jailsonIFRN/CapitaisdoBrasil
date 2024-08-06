@@ -1,62 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto: Estados e Capitais do Brasil</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #003366;
-            font-family: Arial, sans-serif;
-            color: white;
+{% extends "base.html" %}
+
+{% block conteudo %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+
+    h1 {
+        color: #333;
+        font-size: 2rem;
+        text-align: center;
+        margin: 1rem 0;
+        transition: font-size 0.3s ease, color 0.3s ease;
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 3rem;
+            color: #007bff;
         }
-        .container {
-            text-align: center;
-            background-color: #3366cc;
-            padding: 20px;
-            border: 2px solid green;
-            border-radius: 10px;
-        }
-        .container div {
-            margin: 10px;
-            padding: 10px;
-            border: 2px solid #66ccff;
-            border-radius: 5px;
-            background-color: #3399ff;
-        }
-        .container .projeto {
-            border-color: magenta;
-        }
-        .container .dupla a {
-            color: white;
-            text-decoration: underline;
-        }
-        .container .atencao {
-            color: red;
-        }
-        .container .cadastre-se {
-            display: block;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: orange;
-            color: black;
-            text-decoration: none;
-            border: 2px solid orange;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div>Disciplina: Desenvolvimento Web - Prof. Alba<br>2º bimestre</div>
-        <div class="projeto">Projeto: Todas Regiões, Estados e Capitais do Brasil</div>
-        <div class="dupla">Dupla: <a href="#">Jailson</a> e <a href="#">Severino</a></div>
-        <div class="atencao">Atenção: Antes de você acessar, “Cadastre-se”.</div>
-        <a class="cadastre-se" href="{{ url_for('cadastro') }}">-> Cadastre-se aqui <-</a>
-    </div>
-</body>
-</html>
+    }
+
+    h1:hover {
+        color: #0056b3;
+    }
+</style>
+    <h1>Bem-vindo à Nossa Página das Capitais do Brasil</h1>
+{% endblock %}
