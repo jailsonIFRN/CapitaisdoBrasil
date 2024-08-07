@@ -1,77 +1,80 @@
 {% extends "base.html" %}
+{% block estilo %}
+
+    
+    body {
+       font-family: Arial, sans-serif;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       margin: 0;
+   }
+   
+   .container {
+       text-align: center;
+   }
+   
+   .btn-principal {
+       background-color: #007bff;
+       color: white;
+       border: none;
+       padding: 10px 20px;
+       font-size: 16px;
+       cursor: pointer;
+       margin-bottom: 10px;
+   }
+   
+   .btn-secundario {
+       background-color: yellow;
+       color: black;
+       border: 1px solid black;
+       padding: 10px 20px;
+       font-size: 16px;
+       cursor: pointer;
+       margin-bottom: 20px;
+       display: block;
+       margin: 10px auto;
+   }
+   
+   table {
+       width: 100%;
+       border-collapse: collapse;
+   }
+   
+   th, td {
+       border: 1px solid black;
+       padding: 10px;
+       text-align: center;
+   }
+   
+   thead {
+       background-color: #f2f2f2;
+   }
+   
+   .btn-editar, .btn-apagar {
+       background-color: white;
+       border: 1px solid black;
+       padding: 5px 10px;
+       cursor: pointer;
+   }
+   
+   .btn-editar:hover {
+       background-color: #e7e7e7;
+   }
+   
+   .btn-apagar:hover {
+       background-color: #f2f2f2;
+   }
+   
+{% endblock %}
+
 
 {% block conteudo %}
 
-<style>
-    
- body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
 
-.container {
-    text-align: center;
-}
 
-.btn-principal {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
 
-.btn-secundario {
-    background-color: yellow;
-    color: black;
-    border: 1px solid black;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    display: block;
-    margin: 10px auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-}
-
-thead {
-    background-color: #f2f2f2;
-}
-
-.btn-editar, .btn-apagar {
-    background-color: white;
-    border: 1px solid black;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.btn-editar:hover {
-    background-color: #e7e7e7;
-}
-
-.btn-apagar:hover {
-    background-color: #f2f2f2;
-}
-
-</style>
-
-<body>
     <div class="container">
         <button class="btn-principal">BUSCAR AS CAPITAIS DO BRASIL</button>
         <button class="btn-secundario">BUSCAR</button>
@@ -136,7 +139,7 @@ thead {
             </tbody>
         </table>
     </div>
-</body>
+
 
 
 {% endblock %}
