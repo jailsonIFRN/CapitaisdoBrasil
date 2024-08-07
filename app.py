@@ -16,19 +16,17 @@ def pagina_inicial():
 def cadastrar_capitais():
     return render_template('cadastrar_capitais.html')
 
-@app.route("/sul")
-def sul():
-    return render_template('sul.html')
+@app.route("/fala_conosco")
+def fale_conosco():
+    return render_template('fale_conosco.html')
 
-@app.route("/sudeste")
-def sudeste():
-    return render_template('sudeste.html')
+@app.route("/login")
+def login():
+    return render_template('login.html')
 
-@app.route("/centro_oeste")
-def centro_oeste():
-    return render_template('centro-oeste.html')
-
-
+@app.route("/buscar")
+def buscar():
+    return render_template('buscar.html')
 
 
 
