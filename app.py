@@ -12,9 +12,9 @@ def index():
 def pagina_inicial():
     return render_template('pagina_inicial.html')
 
-@app.route("/nordeste")
-def nordeste():
-    return render_template('nordeste.html')
+@app.route("/cadastrar_capitais")
+def cadastrar_capitais():
+    return render_template('cadastrar_capitais.html')
 
 @app.route("/sul")
 def sul():

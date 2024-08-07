@@ -1,61 +1,85 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            background-color: white;
-            padding: 20px;
-            border: 2px solid orange;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .container input[type="text"],
-        .container input[type="password"],
-        .container input[type="submit"],
-        .container a {
-            display: block;
-            margin: 10px auto;
-            padding: 10px;
-            border: 2px solid orange;
-            border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            color: black;
-        }
-        .container input[type="submit"] {
-            background-color: orange;
-            color: white;
-            cursor: pointer;
-        }
-        .container a:hover,
-        .container input[type="submit"]:hover {
-            background-color: #ffa500;
-        }
-    </style>
-</head>
+{% extends "base.html" %}
+
+{% block conteudo %}
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+</style>
 <body>
-    <div class="container">
-        <a href="">CADASTRE-SE AQUI</a>
-        <form action="{{ url_for('cadastro') }}" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome">
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha">
-            <input type="submit" href="" value="CADASTRAR">
-            
-            <a href="{{ url_for('base') }}">ENTRE NO SISTEMA</a>
+    <div class="form-container">
+        <h2>Cadastro de Estado e Capital</h2>
+        <form>
+            <label for="regiao">Região:</label>
+            <select id="regiao" name="regiao" required>
+                <option value="">Selecione a região</option>
+                <option value="norte">Norte</option>
+                <option value="nordeste">Nordeste</option>
+                <option value="centro-oeste">Centro-Oeste</option>
+                <option value="sudeste">Sudeste</option>
+                <option value="sul">Sul</option>
+            </select>
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required>
+
+            <label for="capital">Capital:</label>
+            <input type="text" id="capital" name="capital" required>
+
+           
+
+            <button type="submit">Cadastrar</button>
         </form>
     </div>
 </body>
-</html>
+
+
+{% endblock %}
