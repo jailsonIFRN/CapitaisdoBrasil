@@ -1,6 +1,18 @@
 from flask import Flask, render_template, request, redirect, url_for
 
+from database import db
+import os
+
 app = Flask(__name__)
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
+username = os.getenv('DB_USERNAME')
+password = os.getenv('DB_PASSWORD')
+host = os.getenv('DB_HOST')
+mydb = os.getenv('DB_DATABASE')
+
+conexao = f"mysql+pymysql://{username}:{password}@{host}/{mydb}"
+app.config['SQLALCHEMY_DATABASE_URI'] = conexao
 
 @app.route('/')
 def index():
