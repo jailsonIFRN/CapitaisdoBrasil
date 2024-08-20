@@ -2,6 +2,10 @@ from flask import Flask, render_template, request, redirect, url_for
 
 from database import db
 import os
+from flask_migrate import Migrate
+from diario import Diario
+
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
@@ -13,6 +17,18 @@ mydb = os.getenv('DB_DATABASE')
 
 conexao = f"mysql+pymysql://{username}:{password}@{host}/{mydb}"
 app.config['SQLALCHEMY_DATABASE_URI'] = conexao
+
+
+db.init_app(app)
+migrate = Migrate(app, db)
+
+@app.route('/add.diario')
+def add.diario():
+    d = Diario('LIC001', 'Desenvolvimento web')
+    db.session.add(d)
+    db.session.commit()
+    return 'Dados inseridos com suceso!'
+
 
 @app.route('/')
 def index():
