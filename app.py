@@ -22,8 +22,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = conexao
 db.init_app(app)
 migrate = Migrate(app, db)
 
-@app.route('/add.diario')
-def add.diario():
+@app.route('/add_diario')
+def add_diario():
     d = Diario('LIC001', 'Desenvolvimento web')
     db.session.add(d)
     db.session.commit()
